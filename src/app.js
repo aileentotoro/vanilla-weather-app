@@ -42,7 +42,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.icon);
 }
 
-let apiKey = "422ad7b1oddb5f48b1c6ct93b3c0a949";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=London&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "422ad7b1oddb5f48b1c6ct93b3c0a949";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("markham");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
