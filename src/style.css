@@ -8,11 +8,12 @@ a {
 }
 
 h1 {
-  color: rgb(33, 33, 33);
+  font-family: "Lora", serif;
+  color: rgba(42, 135, 84, 0.863);
   font-weight: 400;
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 100;
-  line-height: 20px;
+  line-height: 28px;
   margin-top: 20px;
   margin-bottom: 8px;
 }
@@ -27,7 +28,7 @@ li {
   color: rgb(33, 33, 33);
   font-size: 18px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 25px;
 }
 
 li.last-updated {
@@ -118,4 +119,9 @@ li:first-letter {
   transition: inherit 1s;
   border-radius: 5px;
   backdrop-filter: blur(10px);
+}
+
+.footer a {
+  color: rgb(33, 33, 33);
+  opacity: 0.5;
 }
