@@ -1,6 +1,6 @@
 body {
   font-family: "Noto Sans", sans-serif;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/185/original/lucas-ludwig-Omo-sEH6bCA-unsplash_%281%29.jpg?1676786714");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/327/original/lucas-ludwig-Omo-sEH6bCA-unsplash_%282%29.jpg?1676871278");
 }
 
 a {
@@ -63,10 +63,14 @@ li:first-letter {
 }
 
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
+  color: rgba(42, 135, 84, 0.863);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
+}
+
+.weather-temperature .units {
+  color: rgba(42, 135, 84, 0.863);
 }
 
 .weather-temperature .units {
@@ -74,12 +78,15 @@ li:first-letter {
   font-size: 16px;
 }
 
-.weather-temperature .feels-like {
-  height: 30px;
-  margin-inline-end: 5px;
-  margin-inline-start: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+.feels-like {
+  padding-top: 24px;
+  opacity: 0.5;
+  font-size: 10px;
+  line-height: 0.9;
+}
+
+.feels-like .feels-like-temperature {
+  font-size: 28px;
 }
 
 .weather-forecast {

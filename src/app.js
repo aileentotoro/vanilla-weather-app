@@ -67,13 +67,15 @@ function getForecast(coordinates) {
   let apiKey = "422ad7b1oddb5f48b1c6ct93b3c0a949";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=Metric`;
   axios.get(apiUrl).then(displayForecast);
-  console.log(apiUrl);
 }
 
 function displayTemperature(response) {
+  console.log(response.data.temperature.feels_like);
+
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
+  let feelslikeElement = document.querySelector("#feels-like-temperature");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
@@ -84,6 +86,7 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city + ", " + response.data.country;
   descriptionElement.innerHTML = response.data.condition.description;
+  feelslikeElement.innerHTML = Math.round(response.data.temperature.feels_like);
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
@@ -108,4 +111,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("hong kong");
+search("markham");
