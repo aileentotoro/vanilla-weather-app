@@ -1,6 +1,10 @@
 body {
   font-family: "Noto Sans", sans-serif;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/327/original/lucas-ludwig-Omo-sEH6bCA-unsplash_%282%29.jpg?1676871278");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto;
 }
 
 a {
