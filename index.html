@@ -40,20 +40,23 @@
             </ul>
           </div>
           <div class="row">
-            <div class="col-3">
-              <div class="d-flex weather-temperature">
-                <img src="" alt="Clear" id="icon">
-                <strong id="temperature"></strong><span class="units">°C</span> 
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-8 col-sm-6">
+                  <div class="d-flex weather-temperature">
+                    <img src="" alt="Clear" id="icon">
+                    <strong id="temperature"></strong><span class="units">°C</span> 
+                  </div>
+                </div>  
+                <div class="col-4 col-sm-6">
+                   <div class="feels-like">
+                   FEELS LIKE
+                   <div class="feels-like-temperature" id="feels-like-temperature"></div>
+                   </div>
+                </div>
               </div>
             </div>
-            <div class="col-4">
-              <div class="feels-like">
-                 FEELS LIKE
-                 <div class="feels-like-temperature" id="feels-like-temperature">
-                 </div>
-               </div>
-            </div>
-            <div class="col-5">
+            <div class="col-sm-4">
               <ul>
                <li>Humidity: <span id="humidity">73</span>%</li>
                <li>Wind: <span id="wind">2</span> km/h</li>
@@ -62,7 +65,8 @@
           </div>
           <div class="weather-forecast" id="forecast">
           </div>
-          
+
+
         </div>
         <div class="footer">
           <small>
